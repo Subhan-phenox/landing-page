@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .section {
+            transition: all 0.5s ease;
+        }
+        .hidden-section {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .visible-section {
+            opacity: 1;
+            height: auto;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600">WebSolution Pro</span>
+                </div>
+                <div class="flex space-x-4 md:space-x-8">
+                    <button onclick="showSection('home')" class="px-3 py-2 text-blue-600 border-b-2 border-blue-600 font-medium">Home</button>
+                    <button onclick="showSection('about')" class="px-3 py-2 text-gray-500 hover:text-blue-600">About</button>
+                    <button onclick="showSection('features')" class="px-3 py-2 text-gray-500 hover:text-blue-600">Features</button>
+                    <button onclick="showSection('contact')" class="px-3 py-2 text-gray-500 hover:text-blue-600">Contact</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Visible by default -->
+    <section id="home" class="section visible-section">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Professional Web Solutions for Your Business</h1>
+                    <p class="text-lg text-gray-600 mb-6">Transform your digital presence with our cutting-edge web solutions tailored to your needs.</p>
+                    <button onclick="showThankYou()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Get Started Now</button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a7580c09-63a3-47b1-9ceb-88a1e9f06da2.png" alt="Professional web developers working on modern computers in a bright office space" class="rounded-lg shadow-xl" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Hidden by default -->
+    <section id="about" class="section hidden-section">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Our Company</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+                    <p class="text-gray-600">To deliver exceptional web solutions that empower businesses to thrive in the digital landscape.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+                    <p class="text-gray-600">To be the leading provider of innovative digital solutions that drive business success.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Our Team</h3>
+                    <p class="text-gray-600">A dedicated group of professionals committed to delivering excellence in web development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - Hidden by default -->
+    <section id="features" class="section hidden-section">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Amazing Features</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-2 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Responsive Design</h3>
+                        <p class="text-gray-600">Our websites look great on all devices, from smartphones to desktop computers.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-2 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Fast Loading</h3>
+                        <p class="text-gray-600">Optimized for lightning-fast performance to keep your visitors engaged.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-2 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">SEO Friendly</h3>
+                        <p class="text-gray-600">Built with search engine optimization in mind to help you rank higher.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-2 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Secure Hosting</h3>
+                        <p class="text-gray-600">Enterprise-grade security measures to protect your website and data.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-2 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Custom Solutions</h3>
+                        <p class="text-gray-600">Tailored to your specific business needs for optimal performance.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-2 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                        <p class="text-gray-600">Our team is always available to assist you with any questions or issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Hidden by default -->
+    <section id="contact" class="section hidden-section">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6fb3c77c-1eb8-46b9-ae8f-cb89bc7e370d.png" alt="Modern office space with team members collaborating around a table with laptops and coffee" class="rounded-lg shadow-xl" />
+                </div>
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"></textarea>
+                        </div>
+                        <div>
+                            <button type="button" onclick="showThankYou()" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Modal - Hidden by default -->
+    <div id="thankYouModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Thank You!</h3>
+                <p class="text-gray-600 mb-6">We've received your request and will get back to you shortly.</p>
+                <button onclick="closeThankYou()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold">WebSolution Pro</span>
+                    <p class="text-gray-400 mt-1">Professional web solutions for your business.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button onclick="showSection('about')" class="text-gray-300 hover:text-white">About</button>
+                    <button onclick="showSection('features')" class="text-gray-300 hover:text-white">Features</button>
+                    <button onclick="showSection('contact')" class="text-gray-300 hover:text-white">Contact</button>
+                    <button onclick="showThankYou()" class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded transition duration-300">Apply Now</button>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-sm text-gray-400 text-center">
+                © 2023 WebSolution Pro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show specific section and hide others
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.remove('hidden-section');
+                    section.classList.add('visible-section');
+                } else {
+                    section.classList.remove('visible-section');
+                    section.classList.add('hidden-section');
+                }
+            });
+        }
+
+        // Show thank you modal
+        function showThankYou() {
+            document.getElementById('thankYouModal').classList.remove('hidden');
+        }
+
+        // Close thank you modal
+        function closeThankYou() {
+            document.getElementById('thankYouModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
+
